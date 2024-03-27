@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Chameleon>
+    <Page
+        category="Test"
+        lable="Test Page">
+        <Button
+            key="key_test_button"
+            label="Test Button" />
+    </Page>
+</Chameleon>

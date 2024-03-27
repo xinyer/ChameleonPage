@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.wx.chameleon.core"
+    namespace = "com.wx.chameleon"
     compileSdk = 34
 
     defaultConfig {

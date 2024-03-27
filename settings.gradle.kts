@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         google {
@@ -20,7 +22,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ChameleonPage"
-include(":app")
-include(":sdk")
-include(":sample")
-include(":core")
+include(":app", ":sdk", ":core", ":sample")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
