@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "ChameleonPage"
 include(":app")
+include(":sdk")
+include(":sample")
+include(":core")
