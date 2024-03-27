@@ -1,4 +1,4 @@
-package com.wx.chameleon.page.repo
+package com.wx.chameleon.page.scanner
 
 import android.content.ComponentName
 import android.content.Context
@@ -8,7 +8,6 @@ import android.content.pm.PackageManager.GET_RECEIVERS
 import android.content.pm.PackageManager.ResolveInfoFlags
 import android.content.pm.ResolveInfo
 import android.os.Build
-import com.wx.chameleon.page.model.ChameleonPage
 
 interface Scanner {
     fun scan(): List<ChameleonPage>
@@ -26,7 +25,7 @@ class ScannerImpl(private val context: Context) : Scanner {
             GET_META_DATA,
         )
         val resId = receiverInfo.metaData.getInt(KEY_CHAMELEON_PAGE)
-        return ChameleonPage(packageName, className, resId)
+        return ChameleonPage(packageName, resId)
     }
 
     private fun queryReceivers(): List<ResolveInfo> {

@@ -1,9 +1,8 @@
-package com.wx.chameleon.page.model
+package com.wx.chameleon.page.scanner
 
 import androidx.annotation.XmlRes
 
 data class ChameleonPage(
     val packageName: String,
-    val className: String,
     @XmlRes val resId: Int,
 )

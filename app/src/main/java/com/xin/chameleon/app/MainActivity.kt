@@ -5,7 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.wx.chameleon.page.repo.ScannerImpl
+import com.wx.chameleon.page.parser.ParserImpl
+import com.wx.chameleon.page.scanner.ScannerImpl
 import com.xin.chameleon.R
 import kotlin.concurrent.thread
 
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         thread {
             ScannerImpl(this).scan().also {
                 println(it)
+                it.forEach {
+                    ParserImpl(this).parse(it).also {
+                        println("pages-> $it")
+                    }
+                }
             }
         }
     }

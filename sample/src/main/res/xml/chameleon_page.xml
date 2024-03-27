@@ -2,9 +2,39 @@
 <Chameleon>
     <Page
         category="Test"
-        lable="Test Page">
+        key="key_test_page"
+        label="Test Page">
+        <Text
+            key="test_text"
+            label="Test Text" />
         <Button
+            click="click_button"
             key="key_test_button"
             label="Test Button" />
+        <Toggle
+            click="action_test_toggle"
+            key="test_toggle"
+            label="Test Toggle" />
+        <Dropdown
+            click="action_test_dropdown"
+            key="test_dropdown"
+            label="Test Dropdown">
+            <item>option 1</item>
+            <item>option 2</item>
+            <item>option 3</item>
+        </Dropdown>
+        <Group label="Group title">
+            <Text
+                key="test_text"
+                label="Test Text" />
+        </Group>
+        <Page
+            category="Test"
+            key="key_test_child_page"
+            label="Test Child Page">
+            <Text
+                key="test_text"
+                label="Test Text" />
+        </Page>
     </Page>
 </Chameleon>
