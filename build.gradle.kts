@@ -7,5 +7,5 @@ plugins {
 
 allprojects {
     apply("$rootDir/config/detekt.gradle")
-//    apply("$rootDir/code_analysis/ktlint.gradle")
+    apply("$rootDir/config/ktlint.gradle")
 }
