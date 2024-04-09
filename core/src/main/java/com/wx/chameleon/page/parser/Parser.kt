@@ -10,6 +10,8 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParser.END_DOCUMENT
 import org.xmlpull.v1.XmlPullParser.END_TAG
 import org.xmlpull.v1.XmlPullParser.START_TAG
+import org.xmlpull.v1.XmlPullParserException
+import java.io.IOException
 import java.util.Stack
 
 interface Parser {
@@ -38,8 +40,11 @@ class ParserImpl(
                 eventType = parser.next()
             }
             pages
-        } catch (e: Exception) {
-            e.printStackTrace()
+        } catch (e: IOException) {
+            Log.e(TAG, "parseXml IOException", e)
+            pages
+        } catch (e: XmlPullParserException) {
+            Log.e(TAG, "parseXml XmlPullParserException", e)
             pages
         }
     }
