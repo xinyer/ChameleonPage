@@ -32,7 +32,7 @@ class DropdownParser : ElementParser {
         )
     }
 
-    private fun parseOptions(parser: XmlPullParser) : List<String> {
+    private fun parseOptions(parser: XmlPullParser): List<String> {
         val options = mutableListOf<String>()
         parser.next()
         while (parser.name != TAG) {

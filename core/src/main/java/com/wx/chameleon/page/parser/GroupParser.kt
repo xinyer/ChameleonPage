@@ -19,7 +19,7 @@ class GroupParser : ElementParser {
         val label = parser.getAttributeValue(null, ATTR_LABEL)
         return Group(
             label = label,
-            children = mutableListOf()
+            children = mutableListOf(),
         )
     }
 

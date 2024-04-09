@@ -24,7 +24,7 @@ class PageParser : ElementParser {
             key = key,
             label = label,
             category = category,
-            children = mutableListOf()
+            children = mutableListOf(),
         )
     }
 
