@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Chameleon>
     <Page
+        title="Test Page"
         category="Test"
         key="key_test_page"
         label="Test Page">
@@ -29,6 +30,7 @@
                 label="Test Text" />
         </Group>
         <Page
+            title="Test Child Page"
             category="Test"
             key="key_test_child_page"
             label="Test Child Page">

@@ -13,16 +13,28 @@ activity = "1.8.2"
 constraintlayout = "2.1.4"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 detekt-cli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detektCli" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 ktlint = { module = "com.pinterest:ktlint", version.ref = "ktlint" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+android-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-startup = {group = "androidx.startup", name = "startup-runtime", version = "1.1.1"}
+androidx-ktx-activity = { group = "androidx.activity", name = "activity-ktx", version = "1.7.2" }
+androidx-ktx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version = "1.6.1" }
+androidx-ktx-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version = "2.6.2" }
+androidx-ktx-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "2.6.2" }
+
+[bundles]
+mvvm = [
+    "androidx-appcompat", "android-material", "androidx-constraintlayout",
+    "androidx-activity", "androidx-ktx", "androidx-ktx-activity",
+    "androidx-ktx-fragment", "androidx-ktx-livedata", "androidx-ktx-viewmodel",
+]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
