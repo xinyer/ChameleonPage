@@ -6,5 +6,5 @@ data class Page(
     override val label: String,
     override val containsSelf: Boolean = true,
     override val children: MutableList<Element>,
-    val category: String?,
+    val category: String,
 ) : Elements(packageName, key, label)
