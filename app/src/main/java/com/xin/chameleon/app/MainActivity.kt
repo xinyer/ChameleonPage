@@ -1,10 +1,12 @@
 package com.xin.chameleon.app
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.wx.chameleon.core.ui.page.PageActivity
 import com.xin.chameleon.R
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        findViewById<Button>(R.id.button).setOnClickListener {
+            PageActivity.start(this)
         }
     }
 }

@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_height"
     android:clickable="true"
-    android:focusable="true"
-    android:gravity="center_vertical"
-    android:paddingHorizontal="16dp">
+    android:focusable="true">
 
     <TextView
         android:id="@+id/title"
@@ -23,7 +21,7 @@
         android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_forward"
+        android:src="@drawable/ic_right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/item_height">
+    android:layout_height="@dimen/item_height"
+    android:clickable="true"
+    android:focusable="true">
 
     <TextView
-        android:id="@+id/category"
-        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Category" />
+        tools:text="title" />
 
     <ImageView
         android:id="@+id/arrow"
@@ -29,5 +32,5 @@
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
