@@ -1,0 +1,43 @@
+<!ELEMENT Chameleon (Page+)>
+
+    <!ELEMENT Page (#PCDATA | Page | Text | Button | Toggle | Input | Dropdown | Group)*>
+    <!ATTLIST Page
+        title CDATA #REQUIRED
+        category CDATA #IMPLIED
+        key CDATA #IMPLIED
+        key CDATA #IMPLIED>
+
+    <!ELEMENT Text (#PCDATA)>
+    <!ATTLIST Text
+        key CDATA #REQUIRED
+        label CDATA #REQUIRED>
+
+    <!ELEMENT Button (#PCDATA)>
+    <!ATTLIST Button
+        key CDATA #REQUIRED
+        label CDATA #REQUIRED
+        click CDATA #REQUIRED>
+
+    <!ELEMENT Toggle (#PCDATA)>
+    <!ATTLIST Toggle
+        key CDATA #REQUIRED
+        label CDATA #REQUIRED
+        click CDATA #REQUIRED>
+
+    <!ELEMENT Input (#PCDATA)>
+    <!ATTLIST Input
+        title CDATA #REQUIRED
+        action_event CDATA #REQUIRED
+        type (0|1|2) #IMPLIED>
+
+    <!ELEMENT Dropdown (#PCDATA | item)>
+    <!ATTLIST Dropdown
+        key CDATA #REQUIRED
+        label CDATA #REQUIRED
+        click CDATA #IMPLIED>
+
+    <!ELEMENT item (#PCDATA)>
+
+    <!ELEMENT Group (#PCDATA | Page | Text | Button | Toggle | Input | Dropdown)*>
+    <!ATTLIST Group
+        title CDATA #REQUIRED>
