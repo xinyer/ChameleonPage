@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wx.chameleon.R
-import com.wx.chameleon.databinding.FragmentCategoryBinding
 import com.wx.chameleon.core.ui.pages.PagesFragment
+import com.wx.chameleon.databinding.FragmentCategoryBinding
 import kotlinx.coroutines.launch
 
 class CategoryFragment : Fragment() {

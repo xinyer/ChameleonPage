@@ -11,6 +11,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.wx.chameleon.core.model.Page
+import com.wx.chameleon.core.ui.page.item.ItemModel
 
 class PageViewModelFactory(private val page: Page?) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

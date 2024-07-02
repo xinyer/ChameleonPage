@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <permission android:name="com.wx.chameleon.PERMISSION" />
+    <uses-permission android:name="com.wx.chameleon.PERMISSION" />
+
     <application>
         <receiver
             android:name=".ChameleonReceiver"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.wx.chameleon.PERMISSION">
             <intent-filter>
                 <action android:name="com.wx.action.CHAMELEON" />
+                <data
+                    android:host="chameleon"
+                    android:scheme="wx" />
             </intent-filter>
             <meta-data
                 android:name="chameleon_page"
                 android:resource="@xml/chameleon_page" />
         </receiver>
     </application>
+
 </manifest>

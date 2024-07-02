@@ -1,13 +1,13 @@
 package com.wx.chameleon.core.model
 
-import com.wx.chameleon.core.ui.page.ButtonItemModel
-import com.wx.chameleon.core.ui.page.DropdownItemModel
-import com.wx.chameleon.core.ui.page.GroupEndItemModel
-import com.wx.chameleon.core.ui.page.GroupStartItemModel
-import com.wx.chameleon.core.ui.page.ItemModel
-import com.wx.chameleon.core.ui.page.PageItemModel
-import com.wx.chameleon.core.ui.page.TextItemModel
-import com.wx.chameleon.core.ui.page.ToggleItemModel
+import com.wx.chameleon.core.ui.page.item.ButtonItemModel
+import com.wx.chameleon.core.ui.page.item.DropdownItemModel
+import com.wx.chameleon.core.ui.page.item.GroupEndItemModel
+import com.wx.chameleon.core.ui.page.item.GroupStartItemModel
+import com.wx.chameleon.core.ui.page.item.ItemModel
+import com.wx.chameleon.core.ui.page.item.PageItemModel
+import com.wx.chameleon.core.ui.page.item.TextItemModel
+import com.wx.chameleon.core.ui.page.item.ToggleItemModel
 
 data class Group(
     override val label: String,

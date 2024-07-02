@@ -1,11 +1,9 @@
 package com.wx.chameleon.core.ui.page.holder
 
 import android.view.ViewGroup
-import com.wx.chameleon.databinding.ItemPageBinding
 import com.wx.chameleon.core.model.Page
-import com.wx.chameleon.core.ui.page.BaseViewHolder
-import com.wx.chameleon.core.ui.page.PageItemModel
-import com.wx.chameleon.core.ui.page.newViewBinding
+import com.wx.chameleon.core.ui.page.item.PageItemModel
+import com.wx.chameleon.databinding.ItemPageBinding
 
 class PageViewHolder(
     parent: ViewGroup,

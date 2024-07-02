@@ -1,12 +1,10 @@
 package com.wx.chameleon.core.ui.page.holder
 
 import android.view.ViewGroup
-import com.wx.chameleon.core.ui.page.BaseViewHolder
-import com.wx.chameleon.core.ui.page.TextItemModel
-import com.wx.chameleon.core.ui.page.newViewBinding
+import com.wx.chameleon.core.ui.page.item.TextItemModel
 import com.wx.chameleon.databinding.ItemTextBinding
 
-class TextViewHolder(parent: ViewGroup) :
+class TextViewHolder(private val parent: ViewGroup) :
     BaseViewHolder<TextItemModel, ItemTextBinding>(newViewBinding(parent)) {
 
     private var item: TextItemModel? = null
@@ -15,11 +13,7 @@ class TextViewHolder(parent: ViewGroup) :
         this.item = item
         binding.apply {
             label.text = item.text.label
-//            value.text = item.text.value
+            item.value(parent.context) { value -> text.text = value }
         }
-    }
-
-    override fun unbind() {
-        super.unbind()
     }
 }

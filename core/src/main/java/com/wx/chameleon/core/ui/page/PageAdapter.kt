@@ -10,6 +10,8 @@ import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import com.wx.chameleon.core.ui.page.holder.BaseViewHolder
+import com.wx.chameleon.core.ui.page.item.ItemModel
 
 class PageAdapter(
     private val viewHolderFactory: ViewHolderFactory,

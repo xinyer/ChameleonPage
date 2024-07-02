@@ -7,8 +7,11 @@ import android.content.pm.PackageManager.GET_META_DATA
 import android.content.pm.PackageManager.GET_RECEIVERS
 import android.content.pm.PackageManager.ResolveInfoFlags
 import android.content.pm.ResolveInfo
+import android.net.Uri
 import android.os.Build
 import android.util.Log
+import com.wx.chameleon.core.ui.page.item.DATA_HOST
+import com.wx.chameleon.core.ui.page.item.DATA_SCHEME
 
 interface Scanner {
     fun scan(): List<ChameleonPage>
@@ -32,7 +35,9 @@ class ScannerImpl(private val context: Context) : Scanner {
     }
 
     private fun queryReceivers(): List<ResolveInfo> {
-        val intent = Intent(ACTION_CHAMELEON)
+        val intent = Intent(ACTION_CHAMELEON).apply {
+            data = Uri.Builder().scheme(DATA_SCHEME).authority(DATA_HOST).build()
+        }
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             context.packageManager.queryBroadcastReceivers(
                 intent,

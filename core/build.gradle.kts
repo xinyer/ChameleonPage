@@ -41,6 +41,7 @@ kapt {
 }
 
 dependencies {
+//    implementation(projects.sdk)
     implementation(libs.bundles.mvvm)
     implementation(libs.androidx.startup)
     implementation(libs.dagger.hilt)

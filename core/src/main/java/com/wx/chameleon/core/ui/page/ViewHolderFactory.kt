@@ -3,6 +3,7 @@ package com.wx.chameleon.core.ui.page
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.wx.chameleon.core.model.Page
+import com.wx.chameleon.core.ui.page.holder.BaseViewHolder
 import com.wx.chameleon.core.ui.page.holder.ButtonViewHolder
 import com.wx.chameleon.core.ui.page.holder.DropdownViewHolder
 import com.wx.chameleon.core.ui.page.holder.GroupEndViewHolder
@@ -10,6 +11,15 @@ import com.wx.chameleon.core.ui.page.holder.GroupStartViewHolder
 import com.wx.chameleon.core.ui.page.holder.PageViewHolder
 import com.wx.chameleon.core.ui.page.holder.TextViewHolder
 import com.wx.chameleon.core.ui.page.holder.ToggleViewHolder
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_BUTTON
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_DROPDOWN
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_GROUP_END
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_GROUP_START
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_PAGE
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_TEXT
+import com.wx.chameleon.core.ui.page.item.ITEM_TYPE_TOGGLE
+import com.wx.chameleon.core.ui.page.item.ItemModel
+import com.wx.chameleon.core.ui.page.item.ItemType
 
 interface ViewHolderFactory {
     fun create(parent: ViewGroup, viewType: Int): BaseViewHolder<ItemModel, ViewBinding>

@@ -5,6 +5,9 @@
     <queries>
         <intent>
             <action android:name="com.wx.action.CHAMELEON" />
+            <data
+                android:host="chameleon"
+                android:scheme="wx" />
         </intent>
     </queries>
 

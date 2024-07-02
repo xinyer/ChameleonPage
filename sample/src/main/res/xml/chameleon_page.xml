@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--<!DOCTYPE Chameleon SYSTEM "chameleon.dtd">-->
-<Chameleon>
+<Chameleon processor="com.wx.chameleon.sample.SampleProcessor">
     <Page
         title="Test Page"
         category="Test"
@@ -14,11 +14,11 @@
             key="key_test_button"
             label="Test Button" />
         <Toggle
-            click="action_test_toggle"
+            click="click_toggle"
             key="test_toggle"
             label="Test Toggle" />
         <Dropdown
-            click="action_test_dropdown"
+            click="click_dropdown"
             key="test_dropdown"
             label="Test Dropdown">
             <item>option 1</item>

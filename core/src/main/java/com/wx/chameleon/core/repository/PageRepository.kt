@@ -22,7 +22,7 @@ class PageRepository private constructor(
             scanner.scan()
                 .flatMap { parser.parse(it) }
                 .filter { it.category.isNotBlank() && it.category.isNotEmpty() }
-                .groupBy { it.category }
+                .groupBy { it.category },
         )
         Log.d(TAG, "${hashCode()} init: $pages")
     }

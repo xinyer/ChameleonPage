@@ -1,10 +1,10 @@
-package com.wx.chameleon.core.ui.page
+package com.wx.chameleon.core.ui.page.holder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-
+import com.wx.chameleon.core.ui.page.item.ItemModel
 
 abstract class BaseViewHolder<T : ItemModel, VB : ViewBinding>(val binding: VB) :
     RecyclerView.ViewHolder(binding.root) {

@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import com.wx.chameleon.R
-import com.wx.chameleon.databinding.FragmentPageBinding
 import com.wx.chameleon.core.model.Page
+import com.wx.chameleon.databinding.FragmentPageBinding
 
 class PageFragment(private val page: Page) : Fragment() {
 
